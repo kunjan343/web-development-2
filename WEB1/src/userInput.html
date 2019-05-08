@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check your Math</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var userChoice = false;
+            do {
+                var num1 = Math.round(Math.random() * 10);
+                var num2 = Math.round(Math.random() * 10);
+                var userInput = prompt("What is " + num1 + " + " + num2 + "?");
+                if (isNaN(userInput)) {
+                    alert("Please enter number.");
+                    return;
+                }
+                if (userInput === null) {
+                    alert("You should write something.");
+                    return;
+                }
+                if (parseInt(userInput) !== num1 + num2) {
+                    alert("Go and start learning math. :(");
+                    return;
+                }
+                alert("You'r genius. :)");
+                userChoice = confirm("Do you want to continue?");
+            } while (userChoice !== false);
+
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
