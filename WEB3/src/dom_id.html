@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic DOM Manipulation</title>
+    <script>
+        // listener start executing code after loading page.
+        document.addEventListener("DOMContentLoaded", function () {
+            var pDOM = document.getElementById("intro");
+            alert(pDOM.innerHTML);
+        });
+    </script>
+</head>
+<body>
+<p id="intro">Hello world!</p>
+</body>
+</html>
