@@ -25,10 +25,10 @@
 hs_err_pid*
 
 # extra files
-**/.idea
-.idea
+**/*.idea
 */**/*.iml
 Slate
 node_modules
 package-lock.json
 **/*.pdf
+**/*.txt
