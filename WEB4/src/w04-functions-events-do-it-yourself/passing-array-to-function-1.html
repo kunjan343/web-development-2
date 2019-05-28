@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Passing an Array to a Function</title>
+</head>
+<body>
+<script>
+    var uppercaseAll = function (a) {
+        for (var index = 0; index < a.length; index++) {
+            a[index] = a[index].toUpperCase();
+        }
+        return a;
+    };
+
+    var myArray = ["tom", "jerry", "spike"];
+    myArray = uppercaseAll(myArray);
+
+    alert("Array elements: " + myArray);
+</script>
+</body>
+</html>

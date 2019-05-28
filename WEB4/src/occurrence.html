@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count number of occurrence</title>
+    <script>
+        var countOccurrence = function (dataString, character) {
+            var count = 0;
+            for (var i of dataString) {
+                if (i == character) {
+                    count++;
+                }
+            }
+            alert("String : " + dataString + "\nNumber of occurrence of " + character + " : " + count);
+        };
+
+        countOccurrence("Rat-a-tat-tat", "t");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

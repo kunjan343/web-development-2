@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Scope</title>
+    <script>
+        var str = "Hello from global!";
+
+        var alertScope = function () {
+            var str = "Hi from local!";
+            alert(str);
+        };
+        
+        alertScope();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
