@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit Converter</title>
+    <script src="converter.js"></script>
+</head>
+<body>
+<form name="converterForm" align="center">
+    <!-- START Celsius/Fahrenheit -->
+    <h2>Celsius/Fahrenheit Conversion</h2>
+    <button type="button" onclick="toCelsius()">to Celsius</button>
+    <button type="button" onclick="toFahrenheit()">to Fahrenheit</button>
+    <br><br>
+    <label for="celsius">Celsius&nbsp;</label><input type="number" id="celsius" name="celsius">
+    &emsp;
+    <label for="fahrenheit">Fahrenheit&nbsp;</label><input type="number" id="fahrenheit" name="fahrenheit">
+    <!-- END Celsius/Fahrenheit -->
+    <hr>
+    <!-- START Feet/Meters -->
+    <h2>Feet/Meters Conversion</h2>
+    <button type="button" onclick="toFeet()">to Feet</button>
+    <button type="button" onclick="toMeters()">to Meters</button>
+    <br><br>
+    <label for="feet">Feet&nbsp;</label><input type="number" id="feet" name="feet">
+    &emsp;
+    <label for="meters">Meters&nbsp;</label><input type="number" id="meters" name="meters">
+    <!-- END Feet/Meters -->
+    <hr>
+    <!-- START Inches/Centimeters -->
+    <h2>Inches/Centimeters Conversion</h2>
+    <button type="button" onclick="toInches()">to Inches</button>
+    <button type="button" onclick="toCentimeters()">to Centimeters</button>
+    <br><br>
+    <label for="inches">Inches&nbsp;</label><input type="number" id="inches" name="inches">
+    &emsp;
+    <label for="centimeters">Centimeters&nbsp;</label><input type="number" id="centimeters" name="centimeters">
+    <!-- END Inches/Centimeters -->
+    <hr>
+    <!-- START Pounds/Kilograms -->
+    <h2>Pounds/Kilograms Conversion</h2>
+    <button type="button" onclick="toPounds()">to Pounds</button>
+    <button type="button" onclick="toKilograms()">to Kilograms</button>
+    <br><br>
+    <label for="pounds">Pounds&nbsp;</label><input type="number" id="pounds" name="pounds">
+    &emsp;
+    <label for="kilograms">Kilograms&nbsp;</label><input type="number" id="kilograms" name="kilograms">
+    <!-- END Pounds/Kilograms -->
+</form>
+</body>
+</html>

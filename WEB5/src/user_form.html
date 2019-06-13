@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Form</title>
+</head>
+<body>
+<form action="thank_you.html" method="get" name="myForm">
+    <label>Username: </label><input type="text" id="txtUsername"><br>
+    <label>Password: </label><input type="password" id="txtPassword"><br>
+    <label>Confirm Password: </label><input type="password" id="txtConfirmPass"><br>
+    <span id="msg"></span>
+    <br>
+    <button type="submit" id="submitBtn" disabled>Submit</button>
+</form>
+<script>
+    var validate = function () {
+        var username = document.getElementById("txtUsername").value;
+        var password = document.getElementById("txtPassword").value;
+        var confirmPassword = document.getElementById("txtConfirmPass").value;
+        var msg = document.getElementById("msg");
+        var isValid = true;
+
+        if (username === "" || password === "" || confirmPassword === "") {
+            msg.innerHTML = "Complete form";
+            msg.style.color = "red";
+            isValid = false;
+        }
+        if (password !== confirmPassword) {
+            msg.innerHTML = "Password Mismatch";
+            msg.style.color = "red";
+            isValid = false;
+        }
+        return isValid;
+    };
+
+    document.myForm.onchange = function () {
+        document.getElementById("submitBtn").disabled = validate();
+    };
+
+    document.myForm.onsubmit = function () {
+        return true;
+    };
+</script>
+</body>
+</html>
