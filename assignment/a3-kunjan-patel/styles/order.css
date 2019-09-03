@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif !important;
+    background: url("../images/tim-background.jpg") repeat;
+}
+
+.order-content-block {
+    max-width: 450px;
+    margin: auto;
+}
+
+.order-title {
+    color: #FFFFFF;
+    font-size: 28px;
+}
+
+.order-detail {
+    border: 2px solid #6d1904;
+    max-width: 450px;
+    background-color: white;
+    margin: 10px 0 !important;
+    padding: 5px !important;
+}
+
+.order-cost {
+    background-color: antiquewhite;
+    padding: 10px 10px;
+}
+
+.order-plus-icon {
+    padding: 20px 0;
+}
+
+.order-error {
+    color: #FFFFFF;
+}
+
+.order-return-link {
+    font-size: larger;
+    color: darkgoldenrod;
+    text-decoration: none;
+}
