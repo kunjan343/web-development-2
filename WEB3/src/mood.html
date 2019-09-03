@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Add a script to this file to ask the user to rate their mood from 1 to 10. Then do the following:
+- change "msg" to say "Your Mood: x", where X is the number they entered. 
+- If they enter a number in the range 1 to 3, change the image to "sad.png".
+ If the number is 8-10 change it to "happy.png". Otherwise leave it as is.
+- Change the href attribute of "msg" so that it links to happy.com, sad.com or neutral.com as appropriate.
+
+Sam Scott, January 2014
+-->
+<html lang="en">
+<head>
+    <title>Mood</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var mood = prompt("Rate your mood");
+            var moodMsgDOM = document.getElementById("msg");
+            if (isNaN(mood)) {
+                alert("Wrong input");
+            }
+            mood = parseInt(mood);
+            if (mood < 1 || mood > 10) {
+                alert("Wrong input");
+                moodMsgDOM.innerHTML = "Wrong input";
+                return;
+            }
+            var moodDOM = document.getElementById("mood_img");
+            if (mood < 4 && mood > 0) {
+                moodDOM.src = "_images/sad.png";
+                moodMsgDOM.innerHTML = "Sad";
+                return;
+            }
+            if (mood < 11 && mood > 7) {
+                moodDOM.src = "_images/happy.png";
+                moodMsgDOM.innerHTML = "Happy";
+                return;
+            }
+            moodDOM.src = "_images/neutral.png";
+            moodMsgDOM.innerHTML = "Neutral";
+        });
+    </script>
+</head>
+<body style="text-align:center">
+<img id="mood_img" src="_images/neutral.png" alt="mood.img">
+<h1><a id="msg">Waiting...</a></h1>
+</body>
+</html>

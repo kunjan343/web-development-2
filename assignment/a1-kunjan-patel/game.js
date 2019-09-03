@@ -20,8 +20,8 @@ const WIN_MESSAGE = {
 };
 
 // Global variable
-var userWin = 0;
-var compWin = 0;
+var userWinCount = 0;
+var compWinCount = 0;
 
 /**
  * Generate random choice for computer
@@ -29,6 +29,7 @@ var compWin = 0;
  * @returns WIN_CHOICE{number}
  */
 function computerChoice() {
+    // min + Math.random() * (max - min + 1)
     return parseInt(1 + Math.random() * 3);
 }
 
@@ -42,11 +43,11 @@ function computerChoice() {
  */
 function checkResult(comChoice, playerChoice) {
     if (WIN_CHOICE[comChoice] === playerChoice) {
-        userWin++;
+        userWinCount++;
         return WIN_MESSAGE[1];
     }
     if (WIN_CHOICE[playerChoice] === comChoice) {
-        compWin++;
+        compWinCount++;
         return WIN_MESSAGE[2];
     }
     return WIN_MESSAGE[3];
@@ -58,10 +59,10 @@ function checkResult(comChoice, playerChoice) {
  * @returns WIN_MESSAGE{number}
  */
 function winStatus() {
-    if (userWin > compWin) {
+    if (userWinCount > compWinCount) {
         return WIN_MESSAGE[1];
     }
-    if (userWin < compWin) {
+    if (userWinCount < compWinCount) {
         return WIN_MESSAGE[2];
     }
     return WIN_MESSAGE[3];
@@ -103,15 +104,15 @@ function playGame() {
         var comChoice = computerChoice();
         var result = "You pick " + CHOICES[playerChoice] + ". Computer pick " + CHOICES[comChoice] + "\n"
           + checkResult(comChoice, playerChoice) + "\n"
-          + "You: " + userWin + "\n"
-          + "Computer: " + compWin;
+          + "You: " + userWinCount + "\n"
+          + "Computer: " + compWinCount;
         alert(result);
         nextRound = confirm("Do you want to play again?");
     } while (nextRound !== false);
 
     var finalScore = "Final score:\n"
-      + "You: " + userWin + "\n"
-      + "Computer: " + compWin + "\n"
+      + "You: " + userWinCount + "\n"
+      + "Computer: " + compWinCount + "\n"
       + winStatus(comChoice, playerChoice);
     alert(finalScore);
 }

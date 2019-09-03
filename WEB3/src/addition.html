@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Finish this program by filling in JavaScript that checks if the user’s answer
+to the addition question is correct, and then display “Correct” or “Incorrect”
+on the web page by changing the innerHTML of the <h1> element.
+-->
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+<h1 style="color:red" id="result"></h1>
+<script>
+    var op1 = Math.floor((Math.random() * 10) + 1);
+    var op2 = Math.floor((Math.random() * 10) + 1);
+    var input = prompt("What is " + op1 + " + " + op2 + "?");
+    var answer = op1 + op2;
+    var answerDOM = document.getElementById("result");
+    if (isNaN(input) || input === "") {
+        answerDOM.style.color = "red";
+        answerDOM.innerHTML = "Incorrect Response";
+    } else if (parseInt(input) !== answer) {
+        answerDOM.style.color = "red";
+        answerDOM.innerHTML = "Incorrect";
+    } else {
+        answerDOM.style.color = "green";
+        answerDOM.innerHTML = "Correct";
+    }
+</script>
+</body>
+</html>

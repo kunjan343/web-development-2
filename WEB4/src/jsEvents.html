@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Event example</title>
+</head>
+<body>
+<button type="button" id="alertBtn">Click Me</button>
+<br>
+<label for="textArea">Basic text area</label><br>
+<textarea rows="6" cols="50" id="textArea"></textarea>
+<script>
+    document.getElementById("alertBtn").onclick = function () {
+        alert("I clicked button")
+    };
+    document.getElementById("textArea").onmouseover = function () {
+        document.getElementById("textArea").style.backgroundColor = "red";
+    };
+
+    document.getElementById("textArea").onmouseout = function () {
+        document.getElementById("textArea").style.backgroundColor = "green";
+    };
+</script>
+</body>
+</html>

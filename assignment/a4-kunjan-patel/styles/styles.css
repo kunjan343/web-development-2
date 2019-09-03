@@ -1,0 +1,41 @@
+html {
+    background-image: url("../images/mario_background.png");
+    background-position: inherit;
+}
+
+body {
+    background: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1976D2;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #FFFFFF !important;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #42A5F5;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #01579B;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count Area of Circle</title>
+    <script>
+        // Returns the area of a circle with radius r
+        var circleArea = function (radius) {
+            return Math.PI * radius * radius;
+        };
+        var radius = prompt("Enter the radius of the circle");
+        if (isNaN(radius)) {
+            alert("Please enter valid radius value");
+        } else {
+            alert("Area of the circle: " + circleArea(radius).toFixed(2));
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

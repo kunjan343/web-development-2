@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Handling - True False Question</title>
+</head>
+<body>
+<p>2 + 2 is 4?</p>
+
+<input type="button" value="True" id="true_button">
+<input type="button" value="False" id="false_button">
+
+<p id="result"></p>
+
+<script>
+    document.getElementById("true_button").onclick = function () {
+        document.getElementById("result").innerHTML = "Correct";
+        document.getElementById("result").style.color = "green";
+    };
+
+    document.getElementById("false_button").onclick = function () {
+        document.getElementById("result").innerHTML = "Ahhhhhh, WRONG";
+        document.getElementById("result").style.color = "red";
+    };
+</script>
+</body>
+</html>
